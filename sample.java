@@ -1,11 +1,15 @@
-public class Sample {
-    public static void main(String[] args) {
-        String userName = "John";
-        System.out.println(greetUser(userName));
-        System.out.println(greetUser(unknownVariable)); // This line introduces an error
-    }
+javascript
+// backend.js
 
-    public static String greetUser(String name) {
-        return "Hello, " + name + "!";
-    }
+function fetchData() {
+    // Simulating a backend API call
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data fetched successfully!");
+        }, 2000);
+    });
 }
+
+fetchData().then((message) => {
+    console.log(message);
+});
